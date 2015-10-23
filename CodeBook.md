@@ -1,107 +1,100 @@
-# Grouping variables
- 1 activity
+## Grouping variables
+ 1. activity
  Type of activity, one of [WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING].
  
- 2 subject
+ 2. subject
  Subject ID, in the range 1 - 30.
 
-# Time variables, means and standard deviations on XYZ axis
- 3 tBodyAccmeanX
- 4 tBodyAccmeanY
- 5 tBodyAccmeanZ
+## Data variables, averaged for each activity and subject
+### Time variables, means and standard deviations on XYZ axis
+ 3. tBodyAccmeanX
+ 4. tBodyAccmeanY
+ 5. tBodyAccmeanZ
  
- 6 tBodyAccstdX
- 7 tBodyAccstdY
- 8 tBodyAccstdZ
+ 6. tBodyAccstdX
+ 7. tBodyAccstdY
+ 8. tBodyAccstdZ
  
- 9 tGravityAccmeanX
-10 tGravityAccmeanY
-11 tGravityAccmeanZ
+ 9. tGravityAccmeanX
+10. tGravityAccmeanY
+11. tGravityAccmeanZ
 
+12. tGravityAccstdX
+13. tGravityAccstdY
+14. tGravityAccstdZ
 
-12 tGravityAccstdX
-13 tGravityAccstdY
-14 tGravityAccstdZ
+15. tBodyAccJerkmeanX
+16. tBodyAccJerkmeanY
+17. tBodyAccJerkmeanZ
 
+18. tBodyAccJerkstdX
+19. tBodyAccJerkstdY
+20. tBodyAccJerkstdZ
 
-15 tBodyAccJerkmeanX
-16 tBodyAccJerkmeanY
-17 tBodyAccJerkmeanZ
+21. tBodyGyromeanX
+22. tBodyGyromeanY
+23. tBodyGyromeanZ
 
+24. tBodyGyrostdX
+25. tBodyGyrostdY
+26. tBodyGyrostdZ
 
-18 tBodyAccJerkstdX
-19 tBodyAccJerkstdY
-20 tBodyAccJerkstdZ
+27. tBodyGyroJerkmeanX
+28. tBodyGyroJerkmeanY
+29. tBodyGyroJerkmeanZ
 
+30. tBodyGyroJerkstdX
+31. tBodyGyroJerkstdY
+32. tBodyGyroJerkstdZ
 
-21 tBodyGyromeanX
-22 tBodyGyromeanY
-23 tBodyGyromeanZ
+33. tBodyAccMagmean
+34. tBodyAccMagstd
 
+35. tGravityAccMagmean
+36. tGravityAccMagstd
 
-24 tBodyGyrostdX
-25 tBodyGyrostdY
-26 tBodyGyrostdZ
+37. tBodyAccJerkMagmean
+38. tBodyAccJerkMagstd
 
+39. tBodyGyroMagmean
+40. tBodyGyroMagstd
 
-27 tBodyGyroJerkmeanX
-28 tBodyGyroJerkmeanY
-29 tBodyGyroJerkmeanZ
-
-
-30 tBodyGyroJerkstdX
-31 tBodyGyroJerkstdY
-32 tBodyGyroJerkstdZ
-
-
-33 tBodyAccMagmean
-34 tBodyAccMagstd
-
-35 tGravityAccMagmean
-36 tGravityAccMagstd
-
-37 tBodyAccJerkMagmean
-38 tBodyAccJerkMagstd
-
-39 tBodyGyroMagmean
-40 tBodyGyroMagstd
-
-41 tBodyGyroJerkMagmean
-42 tBodyGyroJerkMagstd
+41. tBodyGyroJerkMagmean
+42. tBodyGyroJerkMagstd
 
 # Fast Fourier Transformation variables, means and standard deviations on XYZ axis
-43 fBodyAccmeanX
-44 fBodyAccmeanY
-45 fBodyAccmeanZ
+43. fBodyAccmeanX
+44. fBodyAccmeanY
+45. fBodyAccmeanZ
 
-46 fBodyAccstdX
-47 fBodyAccstdY
-48 fBodyAccstdZ
+46. fBodyAccstdX
+47. fBodyAccstdY
+48. fBodyAccstdZ
 
-49 fBodyAccJerkmeanX
-50 fBodyAccJerkmeanY
-51 fBodyAccJerkmeanZ
+49. fBodyAccJerkmeanX
+50. fBodyAccJerkmeanY
+51. fBodyAccJerkmeanZ
 
-52 fBodyAccJerkstdX
-53 fBodyAccJerkstdY
-54 fBodyAccJerkstdZ
+52. fBodyAccJerkstdX
+53. fBodyAccJerkstdY
+54. fBodyAccJerkstdZ
 
-55 fBodyGyromeanX
-56 fBodyGyromeanY
-57 fBodyGyromeanZ
+55. fBodyGyromeanX
+56. fBodyGyromeanY
+57. fBodyGyromeanZ
 
-58 fBodyGyrostdX
-59 fBodyGyrostdY
-60 fBodyGyrostdZ
+58. fBodyGyrostdX
+59. fBodyGyrostdY
+60. fBodyGyrostdZ
 
-61 fBodyAccMagmean
-62 fBodyAccMagstd
+61. fBodyAccMagmean
+62. fBodyAccMagstd
 
-63 fBodyBodyAccJerkMagmean
-64 fBodyBodyAccJerkMagstd
+63. fBodyBodyAccJerkMagmean
+64. fBodyBodyAccJerkMagstd
 
-65 fBodyBodyGyroMagmean
-66 fBodyBodyGyroMagstd
+65. fBodyBodyGyroMagmean
+66. fBodyBodyGyroMagstd
 
-67 fBodyBodyGyroJerkMagmean
-68 fBodyBodyGyroJerkMagstd
+67. fBodyBodyGyroJerkMagmean
+68. fBodyBodyGyroJerkMagstd
