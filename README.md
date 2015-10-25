@@ -3,11 +3,7 @@ Submission for the Course Project for the Getting and Cleaning Data course on Co
 
 ## Content of the repository:
 #### README.md
-<<<<<<< HEAD
 This file.
-=======
-#### <a href="https://github.com/paesibassi/GetCleanDataProject/blob/master/run_analysis.R">run_analysis.R</a>:
->>>>>>> origin/master
 
 #### run_analysis.R:
 The script will download and unpack the data folder (if it doesn't exist already), then will select the relevant columns and perform the requested aggregations, exporting the resulting X_summary.txt
@@ -20,13 +16,8 @@ Hereby the steps:
 5. calculate the mean for each variable for each activity and each subject
 6. export resulting data.table to X_summary.txt
 
-<<<<<<< HEAD
 #### CodeBook.md
 The codebook explaining the data manipulation steps and resulting variables.
 
 #### X_summary.txt
 Exported resulting dataset (wide format, one variable per column), comma separated values format.
-=======
-#### <a href="https://github.com/paesibassi/GetCleanDataProject/blob/master/CodeBook.md">CodeBook</a>
-#### <a href="https://github.com/paesibassi/GetCleanDataProject/blob/master/X_summary.txt">X_summary</a> data file
->>>>>>> origin/master
