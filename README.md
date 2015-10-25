@@ -10,7 +10,7 @@ Submission for the Course Project for the Getting and Cleaning Data course on Co
 #### README.md
 This file.
 
-#### [run_analysis.R](https://github.com/paesibassi/GetCleanDataProject/blob/master/run_analysis.R):
+#### [run_analysis.R](https://github.com/paesibassi/GetCleanDataProject/blob/master/run_analysis.R)
 The script will download and unzip the data folder (if it doesn't exist already), then will select the relevant columns (only mean() and std()) and finally perform the requested aggregations, exporting the results into space delimited *X_summary.txt*.  
 Hereby the steps of the code in the script:
 
