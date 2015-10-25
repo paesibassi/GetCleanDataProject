@@ -76,7 +76,7 @@ colnames(X_merge_meanstd) <- gsub("\\.", "",          # trim dots
 # 5. calculate the mean for each variable for each activity and each subject
 setkey(X_merge_meanstd, activity, subject)
 X_summary <-
-  X_merge_meanstd[, lapply(.SD, sum), by = list(activity, subject), .SDcols = 4:69]
+  X_merge_meanstd[, lapply(.SD, mean), by = list(activity, subject), .SDcols = 4:69]
 
 # 6. export resulting data.table to X_summary.txt
 write.table(X_summary, file = "X_summary.txt", row.name = FALSE)
