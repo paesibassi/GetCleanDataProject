@@ -7,16 +7,16 @@ Jawbone Up are racing to develop the most advanced algorithms to attract new
 users.
 
 ## Dataset information
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+> The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+> The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen [here](http://www.youtube.com/watch?v=XOEN9W05_4A).
+> A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen [here](http://www.youtube.com/watch?v=XOEN9W05_4A).
 
 The original dataset of the experiment results can be found [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
 ## Goal of the course assignment
-Create one R script called run_analysis.R that does the following:
+>Create one R script called `run_analysis.R` that does the following:
 
 1. Merges the training and the test sets to create one data set.
 2. Selects only the measurements on the mean and standard deviation for each measurement.
@@ -26,16 +26,22 @@ Create one R script called run_analysis.R that does the following:
 
 ## R script and data manipulation
 ### run_analysis.R:
-This script will download and unpack the data folder (if it doesn't exist already), then will select the relevant columns and perform the requested aggregations, exporting the resulting X_summary.txt dataset file.
-Hereby the processing steps:
+The script will download and unzip the data folder (if it doesn't exist already), then will select the relevant columns (only `mean()` and `std()`) and finally perform the requested aggregations, exporting the results into space delimited `X_summary.txt`.  
+Hereby the steps of the code in the script:
 
 0. download file and unzip in local folder, then import the fixed width files (using readr package, MUCH faster)
-1. merge the datasets (using data.table functions for faster performance), then extract and filter column names (features)
-2. select only mean() and std() columns into a new data.table
+1. merge the datasets (using data.table functions for faster performance), then extract and filter column names
+2. select only columns containing `mean()` and `std()` into a new data.table
 3. add activity names to labels
 4. clean descriptive column names
 5. calculate the mean for each variable for each activity and each subject
-6. export resulting data.table to X_summary.txt
+6. export resulting data.table to `X_summary.txt`
+
+## Output dataset `X_summary.txt`
+Exported resulting dataset (wide format, one variable per column):
+- 68 columns = 1 activity label + 1 subject id + 66 features
+- 180 rows = 6 activities by 30 subjects
+Space separated values format.
 
 ## Variable Descriptions
 
