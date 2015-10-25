@@ -40,12 +40,12 @@ Hereby the processing steps:
 ## Variable Descriptions
 
 #### Activity labels
-- WALKING
-- WALKING_UPSTAIRS
-- WALKING_DOWNSTAIRS
-- SITTING
-- STANDING
-- LAYING
+- walking
+- walking_upstairs
+- walking_downstairs
+- sitting
+- standing
+- laying
 
 Observations from the original dataset have been averaged for each activity and subject.
 

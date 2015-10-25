@@ -21,4 +21,4 @@ Hereby the steps:
 The codebook explaining the data manipulation steps and resulting variables.
 
 #### [X_summary.txt](https://github.com/paesibassi/GetCleanDataProject/blob/master/X_summary.txt)
-Exported resulting dataset (wide format, one variable per column), comma separated values format.
+Exported resulting dataset (wide format, one variable per column), space separated values format.

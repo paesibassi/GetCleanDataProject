@@ -1,9 +1,12 @@
-# You should create one R script called run_analysis.R that does the following:
-# 1. Merges the training and the test sets to create one data set.
-# 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-# 3. Uses descriptive activity names to name the activities in the data set
-# 4. Appropriately labels the data set with descriptive variable names.
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# 0. download file and unzip in local folder, then import the fixed width files
+#    (using readr package, MUCH faster)
+# 1. merge the datasets (using data.table # functions for faster performance),
+#    then extract and filter column names (features)
+# 2. select only mean() and std() columns into a new data.table
+# 3. add activity names to labels
+# 4. clean descriptive column names
+# 5. calculate the mean for each variable for each activity and each subject
+# 6. export resulting data.table to X_summary.txt
 
 # loads necessary libraries
 library(readr)
@@ -57,10 +60,10 @@ X_merge_meanstd <-
 
 # 3. add activity names to labels
 labels <-
-  as.data.table(read_delim(
-    "./UCI HAR Dataset/activity_labels.txt", delim = " ", col_names = FALSE
-  ))
+  read_delim("./UCI HAR Dataset/activity_labels.txt", delim = " ", col_names = FALSE)
 colnames(labels) <- c("label", "activity")
+labels[, "activity"] <- sapply(labels[, "activity"], FUN = tolower)
+labels <- as.data.table(labels)
 X_merge_meanstd <-
   merge(labels, X_merge_meanstd, by = "label", all.y = TRUE)
 
